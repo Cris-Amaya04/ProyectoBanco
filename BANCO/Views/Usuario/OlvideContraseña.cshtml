@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "_IngresoLayout";
+    ViewData["Title"] = "Restablecer contraseña";
+}
+
+<h2>Restablecer Contraseña</h2>
+<hr>
+<br/>
+<p>Para restablecer su contraseña por favor ingrese su correo electronico con el que se encuentra registrado en la e-banca AUML</p>
+<p>Si no recuerda el correo asociado a su cuenta por favor visitar una de las sucursales de AUML Bank</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.Label("Correo Electrónico")
+        <br/>
+        @Html.TextBox("correoElectronico", null, new { @class = "form-control" })
+    </div>
+    @if (!string.IsNullOrEmpty(ViewBag.Error))
+    {
+        <div class="text-danger">
+            @ViewBag.Error
+        </div>
+    }
+    <br/>
+    <div class="form-group">
+        <br>
+        <input type="submit" value="Enviar" class="btn btn-primary" />
+    </div>
+   
+}

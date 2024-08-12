@@ -1,0 +1,13 @@
+contraseña correo bancoAUML@gmail.com
+bancoAUML.123
+
+contraseña de aplicacion (smtp)
+qqudfzgjnhjhpyde
+
+----------------------------------------------
+----------------------------------------------
+
+smtpServer = "smtp.gmail.com";
+smtpPort = 587;
+smtpUsername = "bancoauml@gmail.com";
+smtpPassword = "qqudfzgjnhjhpyde";

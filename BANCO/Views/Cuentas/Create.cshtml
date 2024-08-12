@@ -1,0 +1,47 @@
+﻿@model BANCO.Models.Cuenta
+
+@{
+    ViewData["Title"] = "Creación de cuenta";
+}
+
+<h1>Crear cuenta</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaldoActual" class="control-label">Saldo Actual</label>
+                <input asp-for="SaldoActual" class="form-control" />
+                <span asp-validation-for="SaldoActual" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Tipo"></label>
+                @Html.DropDownList(
+                "Tipo",Html.GetEnumSelectList<Tipo_Cuenta>(),
+                "Seleccione una cuenta",
+                new{@class = "form-control"})
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br/>
+<div>
+    <a asp-action="ResumenCuenta">Regresar a mis cuentas</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

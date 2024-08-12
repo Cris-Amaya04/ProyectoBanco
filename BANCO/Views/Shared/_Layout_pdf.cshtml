@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>@ViewData["Title"] E-banca AUML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="~/assets/css/animated.css">
+    <link rel="stylesheet" href="~/assets/css/owl.css">
+    <style>
+        .container {
+            min-height: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            flex-shrink: 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo img {
+            width: 100px; 
+        }
+
+        .company-values {
+            text-align: right;
+        }
+
+            .company-values h1 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .company-values ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .company-values li {
+                font-size: 14px;
+                margin-bottom: 5px;
+                color: #777;
+            }
+
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo banco AUML">
+        </div>
+        <div class="company-values">
+            <h1>Trabajamos para brindarte un servicio de calidad</h1>
+            <ul>
+                <li>Compromiso</li>
+                <li>Innovacion</li>
+                <li>Seguridad</li>
+            </ul>
+        </div>
+    </header>
+    <br/>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Banco AUML   |   El Salvador - ESV, 2279-5008 |  info@bancoauml.co.sv
+        </div>
+    </footer>
+
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/owl-carousel.js"></script>
+    <script src="~/assets/js/animation.js"></script>
+    <script src="~/assets/js/imagesloaded.js"></script>
+    <script src="~/assets/js/popup.js"></script>
+    <script src="~/assets/js/custom.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
